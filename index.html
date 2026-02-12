@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Insight Hub | Consulting & Strategy</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .page { display: none; }
+    .page.active { display: block; }
+    * { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <h1 onclick="showPage('home')" class="text-2xl font-bold cursor-pointer text-blue-600">
+      Business Insight Hub
+    </h1>
+
+    <nav class="hidden md:flex gap-6 font-semibold">
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('about')">About</button>
+      <button onclick="showPage('services')">Services</button>
+      <button onclick="showPage('portfolio')">Case Studies</button>
+      <button onclick="showPage('contact')">Contact</button>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="home" class="page active">
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-32">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <h2 class="text-5xl font-bold mb-6 leading-tight">
+          Smart Strategy.<br>Real Growth.
+        </h2>
+
+        <p class="text-lg mb-8 text-blue-100">
+          We help ambitious businesses grow through data-driven consulting,
+          operational excellence, and digital innovation.
+        </p>
+
+        <div class="flex gap-4">
+          <button onclick="showPage('contact')"
+            class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">
+            Get Started
+          </button>
+
+          <button onclick="showPage('services')"
+            class="border border-white px-6 py-3 rounded-lg font-semibold">
+            Our Services
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
+             alt="Business Meeting"
+             class="rounded-2xl shadow-lg" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h3 class="text-4xl font-bold text-center mb-16">Why Choose Us</h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-white p-8 rounded-2xl shadow">
+          <img src="https://images.unsplash.com/photo-1523952578875-e6bb18b26645"
+               class="rounded-lg mb-4" />
+          <h4 class="text-xl font-bold mb-2">Expert Guidance</h4>
+          <p class="text-slate-600">20+ years of combined consulting experience.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+               class="rounded-lg mb-4" />
+          <h4 class="text-xl font-bold mb-2">Data-Driven</h4>
+          <p class="text-slate-600">Every recommendation is backed by analytics.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+               class="rounded-lg mb-4" />
+          <h4 class="text-xl font-bold mb-2">Trusted Partner</h4>
+          <p class="text-slate-600">Long-term relationships, not quick wins.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
+             class="rounded-2xl shadow-lg" />
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold mb-6">Who We Are</h2>
+
+        <p class="text-slate-600 mb-4">
+          Our mission is to restore and strengthen Hong Kong’s family-owned SMEs through disciplined, hands-on operational leadership. During periods of challenge or transition, we assume temporary management to drive measurable improvements in revenue and profitability, with a compensation model strictly aligned to the incremental value we create.
+        </p>
+
+        <p class="text-slate-600 mb-4">
+          We operate with total transparency and real-time performance tracking, ensuring owners retain ultimate oversight at every stage. Our goal is a seamless transition: delivering back a resilient, high-value business primed for long-term success.
+        </p>
+
+        <ul class="space-y-2 font-semibold">
+          <li>✔ Certified Consultants</li>
+          <li>✔ Global Client Base</li>
+          <li>✔ Proven Methodologies</li>
+          <li>✔ Results-Oriented Culture</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="page">
+
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-4xl font-bold text-center mb-6">Our Services</h2>
+      <p class="text-center text-slate-600 max-w-3xl mx-auto mb-16">
+        We deliver hands-on consulting and talent development programs designed to
+        strengthen SMEs and empower the next generation of business leaders.
+      </p>
+
+      <!-- CONSULTING -->
+      <div class="bg-white rounded-2xl shadow-lg p-10 mb-16">
+
+        <h3 class="text-3xl font-bold mb-4 text-blue-600">1. Management & Digital Consulting</h3>
+
+        <p class="text-slate-600 mb-4">
+          We provide comprehensive management and operational consulting services for
+          small and medium-sized enterprises. While many SMEs are surviving, they often
+          hold untapped potential for scalability and long-term growth. Our mission is
+          to help these businesses expand and thrive through structured leadership,
+          digital transformation, and strategic advertising.
+        </p>
+
+        <p class="text-slate-600 mb-6">
+          Our core strength lies in adaptability. We leverage modern technologies to
+          optimize business models at every operational level, from customer engagement
+          to backend systems and financial reporting.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-6">
+
+          <div class="bg-slate-50 p-6 rounded-xl">
+            <h4 class="font-bold mb-2">Operational Transformation</h4>
+            <ul class="list-disc ml-5 text-slate-600 space-y-1">
+              <li>CRM system implementation</li>
+              <li>Workflow automation</li>
+              <li>Inventory optimization</li>
+              <li>Cloud-based accounting tools</li>
+              <li>Data analytics & reporting</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-xl">
+            <h4 class="font-bold mb-2">Digital Marketing & Advertising</h4>
+            <ul class="list-disc ml-5 text-slate-600 space-y-1">
+              <li>Search Engine Optimization (SEO)</li>
+              <li>Facebook & Google Ads campaigns</li>
+              <li>Email marketing systems</li>
+              <li>Content creation & branding</li>
+              <li>Website development</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="text-slate-600">
+          By combining operational excellence with targeted marketing strategies, we
+          help SMEs improve profitability, strengthen customer loyalty, and build
+          sustainable competitive advantages.
+        </p>
+
+      </div>
+
+      <!-- STUDENT MENTOR -->
+      <div class="bg-white rounded-2xl shadow-lg p-10">
+
+        <h3 class="text-3xl font-bold mb-4 text-indigo-600">2. Student–Mentor Bridge</h3>
+
+        <p class="text-slate-600 mb-4">
+          Our Student–Mentor Bridge connects entrepreneurial-minded students with
+          experienced industry professionals, founders, and business leaders from
+          diverse sectors.
+        </p>
+
+        <p class="text-slate-600 mb-6">
+          Through structured programs and curated events, we provide students with
+          practical exposure, mentorship, and career guidance, while enabling mentors
+          to share their expertise and contribute to shaping future leaders.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-6">
+
+          <div class="bg-slate-50 p-6 rounded-xl">
+            <h4 class="font-bold mb-2">Programs & Activities</h4>
+            <ul class="list-disc ml-5 text-slate-600 space-y-1">
+              <li>Industry workshops & seminars</li>
+              <li>Entrepreneurship bootcamps</li>
+              <li>Networking events</li>
+              <li>Guest speaker sessions</li>
+              <li>Innovation showcases</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-xl">
+            <h4 class="font-bold mb-2">Mentorship & Development</h4>
+            <ul class="list-disc ml-5 text-slate-600 space-y-1">
+              <li>One-on-one mentorship programs</li>
+              <li>Career coaching</li>
+              <li>Startup incubation guidance</li>
+              <li>Leadership development</li>
+              <li>Professional skill training</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="text-slate-600">
+          This platform enables students to gain real-world insights, expand their
+          professional networks, and explore innovative ideas, while building
+          confidence and leadership capacity for future careers.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" class="page">
+
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-4xl font-bold text-center mb-16">Case Studies</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-slate-50 p-8 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-2">Retail Growth Project</h3>
+          <p class="text-slate-600 mb-2">+45% revenue in 12 months</p>
+          <p class="text-slate-600">Implemented digital inventory and marketing systems.</p>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-2xl shadow">
+          <h3 class="text-xl font-bold mb-2">Tech Startup Scaling</h3>
+          <p class="text-slate-600 mb-2">Series B Funding Success</p>
+          <p class="text-slate-600">Built growth and investor strategy.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-6 bg-white rounded-2xl shadow p-12">
+
+      <h2 class="text-4xl font-bold mb-8 text-center">Contact Us</h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <div>
+          <p class="mt-2">Email: thebusinessinsighthub@gmail.com</p>
+          <p>Phone: +852 67061310</p>
+          <p>Phone: +852 5636 4838</p>
+        </div>
+
+        <div class="space-y-4">
+          <input class="w-full border p-3 rounded" placeholder="Name" />
+          <input class="w-full border p-3 rounded" placeholder="Email" />
+          <textarea class="w-full border p-3 rounded" rows="4" placeholder="Message"></textarea>
+
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">
+            Send Message
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white py-8 text-center">
+  <p class="font-semibold">Business Insight Hub</p>
+  <p class="text-slate-400 text-sm">© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+
+function showPage(pageId){
+
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+  });
+
+  document.getElementById(pageId)
+          .classList.add('active');
+
+  window.scrollTo(0,0);
+}
+
+</script>
+
+</body>
+</html>
