@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- =========================
+     HEAD / GLOBAL CONFIG
+========================= -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Insight Hub | Consulting & Strategy</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Brand Color System -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: "#0B2C4D",
+              light: "#123E6B",
+              dark: "#071F36"
+            },
+            cream: "#F4EFE6"  /* Logo background color */
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Premium Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <style>
+    .page { display: none; }
+    .page.active { display: block; }
+    * { scroll-behavior: smooth; }
+
+    /* Refined hero background */
+    .hero-bg {
+      background: linear-gradient(135deg, #0B2C4D 0%, #071F36 100%);
+    }
+  </style>
+</head>
+
+
+
+<!-- =========================
+     BODY START
+========================= -->
+<body class="bg-cream text-slate-800 font-['Inter']">
+
+
+<!-- =========================
+     HEADER / NAVIGATION
+========================= -->
+<header class="bg-cream sticky top-0 z-50 border-b border-slate-200">
+
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <div onclick="showPage('home')" class="cursor-pointer flex items-center">
+      <img 
+        src="https://i.postimg.cc/D04t1Sbn/IMG-8146.jpg"
+        alt="Business Insight Hub Logo"
+        class="h-12 w-auto">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex gap-8 font-medium text-slate-700">
+      <button onclick="showPage('home')" class="hover:text-brand transition">Home</button>
+      <button onclick="showPage('about')" class="hover:text-brand transition">About</button>
+      <button onclick="showPage('services')" class="hover:text-brand transition">Services</button>
+      <button onclick="showPage('allinone')" class="hover:text-brand transition">All in one</button>
+      <button onclick="showPage('contact')" class="hover:text-brand transition">Contact</button>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     HOME PAGE
+========================= -->
+<div id="home" class="page active">
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-bg text-white py-36">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight font-['Playfair_Display']">
+        Strategic Clarity.<br>
+        Sustainable Growth.
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10">
+        We partner with Hong Kong SMEs to drive operational excellence,
+        digital transformation, and measurable profitability improvements.
+      </p>
+
+      <div class="flex justify-center gap-6">
+
+        <button onclick="showPage('contact')"
+          class="bg-cream text-brand px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition shadow-md">
+          Speak With Us
+        </button>
+
+        <button onclick="showPage('services')"
+          class="border border-white px-8 py-3 rounded-lg font-semibold hover:bg-cream hover:text-brand transition">
+          Explore Services
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== WHY CHOOSE US SECTION ===== -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h3 class="text-4xl font-bold text-center mb-16 font-['Playfair_Display']">
+        Why Choose Us
+      </h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Feature Card 1 -->
+        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+          <h4 class="text-xl font-bold mb-2 text-brand">Expert Guidance</h4>
+          <p class="text-slate-600">20+ years of combined consulting experience.</p>
+        </div>
+
+        <!-- Feature Card 2 -->
+        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+          <h4 class="text-xl font-bold mb-2 text-brand">Data-Driven</h4>
+          <p class="text-slate-600">Every recommendation is backed by analytics.</p>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+          <h4 class="text-xl font-bold mb-2 text-brand">Trusted Partner</h4>
+          <p class="text-slate-600">Long-term relationships, not quick wins.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+
+<!-- =========================
+     ABOUT PAGE
+========================= -->
+<div id="about" class="page">
+
+  <section class="py-28 bg-cream relative overflow-hidden">
+
+    <!-- Decorative Accent Background Shapes -->
+    <div class="absolute top-0 right-0 w-72 h-72 bg-brand opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand opacity-5 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+      <!-- =========================
+           SECTION HEADER
+      ========================= -->
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-brand mb-6">
+          About Us
+        </h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          We strengthen SMEs through intelligent systems, strategic clarity,
+          and disciplined execution.
+        </p>
+      </div>
+
+
+      <!-- =========================
+           MAIN CONTENT
+      ========================= -->
+      <div class="grid md:grid-cols-2 gap-16 items-start mb-24">
+
+        <!-- Left Content -->
+        <div class="space-y-6 text-slate-700 leading-relaxed text-lg">
+
+          <p>
+            Business Insight Hub was founded to modernise and
+            future-proof Hong Kong’s SMEs through structured
+            AI integration and strategic operational leadership.
+          </p>
+
+          <p>
+            We specialise in embedding Artificial Intelligence
+            directly into CRM systems — transforming how businesses
+            manage customer relationships, analyse data,
+            automate workflows, and drive measurable growth.
+          </p>
+
+          <p>
+            Beyond systems, we design strategic marketing frameworks
+            that align acquisition, branding, and performance analytics
+            into one cohesive growth engine.
+          </p>
+
+        </div>
+
+        <!-- Right Visual Block -->
+        <div class="grid grid-cols-2 gap-6">
+
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 text-center">
+            <h3 class="text-4xl font-bold text-brand mb-2">AI</h3>
+            <p class="text-slate-600 text-sm">
+              Integrated CRM Automation
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 text-center">
+            <h3 class="text-4xl font-bold text-brand mb-2">Data</h3>
+            <p class="text-slate-600 text-sm">
+              Real-Time Performance Insights
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 text-center">
+            <h3 class="text-4xl font-bold text-brand mb-2">Growth</h3>
+            <p class="text-slate-600 text-sm">
+              Strategic Marketing Systems
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 text-center">
+            <h3 class="text-4xl font-bold text-brand mb-2">Scale</h3>
+            <p class="text-slate-600 text-sm">
+              Operational Optimisation
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           WHY WE ARE DIFFERENT
+      ========================= -->
+      <div class="bg-white rounded-2xl p-14 shadow-lg border border-slate-100 mb-24">
+
+        <h3 class="text-3xl font-bold text-brand text-center mb-10 font-['Playfair_Display']">
+          What Makes Us Different
+        </h3>
+
+        <div class="grid md:grid-cols-3 gap-10 text-slate-700">
+
+          <div>
+            <h4 class="font-semibold text-brand mb-3">System-First Thinking</h4>
+            <p>
+              We prioritise sustainable infrastructure over short-term tactics,
+              building systems that scale with your business.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand mb-3">AI Practicality</h4>
+            <p>
+              We focus on real AI implementation — not trends —
+              embedding automation into daily operations.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-brand mb-3">Execution Discipline</h4>
+            <p>
+              Strategy is paired with measurable KPIs,
+              accountability frameworks, and direct implementation.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           CLOSING STATEMENT
+      ========================= -->
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="text-slate-700 text-lg leading-relaxed">
+          We operate as strategic partners — not external observers.
+          Our mandate is simple: integrate intelligence, optimise performance,
+          and build businesses capable of sustainable, long-term growth.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- =========================
+     SERVICES PAGE
+========================= -->
+<div id="services" class="page">
+
+  <section class="py-28 bg-cream">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!-- =========================
+           PAGE HEADER
+      ========================= -->
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-brand mb-6">
+          Our Services
+        </h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          We provide structured, hands-on advisory and implementation services
+          designed to strengthen SMEs through AI systems, disciplined operations,
+          and scalable marketing strategy.
+        </p>
+      </div>
+
+
+      <!-- =========================
+           SERVICE PILLAR 1
+      ========================= -->
+      <div class="mb-20 grid md:grid-cols-2 gap-14 items-center">
+
+        <div>
+          <h3 class="text-3xl font-bold text-brand mb-6">
+            AI Integration & CRM Systems
+          </h3>
+
+          <p class="text-slate-700 mb-6 leading-relaxed">
+            We design and implement intelligent CRM ecosystems that centralise
+            customer data, automate workflows, and enable real-time performance
+            visibility across your organisation.
+          </p>
+
+          <ul class="space-y-3 text-slate-700">
+            <li>✔ CRM system architecture & implementation</li>
+            <li>✔ AI-powered customer analytics</li>
+            <li>✔ Sales pipeline automation</li>
+            <li>✔ Workflow & process optimisation</li>
+            <li>✔ Performance dashboard & reporting systems</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-10 rounded-2xl shadow-md border border-slate-100">
+          <h4 class="text-xl font-semibold text-brand mb-4">
+            Outcome Focus
+          </h4>
+          <p class="text-slate-600">
+            Improved customer retention, increased sales conversion rates,
+            reduced manual inefficiencies, and clearer operational control
+            through structured AI integration.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           SERVICE PILLAR 2
+      ========================= -->
+      <div class="mb-20 grid md:grid-cols-2 gap-14 items-center">
+
+        <div class="order-2 md:order-1 bg-white p-10 rounded-2xl shadow-md border border-slate-100">
+          <h4 class="text-xl font-semibold text-brand mb-4">
+            Outcome Focus
+          </h4>
+          <p class="text-slate-600">
+            Sustainable acquisition systems, improved ROI on advertising spend,
+            stronger brand positioning, and scalable revenue growth.
+          </p>
+        </div>
+
+        <div class="order-1 md:order-2">
+          <h3 class="text-3xl font-bold text-brand mb-6">
+            Strategic Marketing & Growth
+          </h3>
+
+          <p class="text-slate-700 mb-6 leading-relaxed">
+            We develop structured marketing frameworks that combine data-driven
+            advertising, brand clarity, and measurable performance systems.
+          </p>
+
+          <ul class="space-y-3 text-slate-700">
+            <li>✔ Performance marketing strategy</li>
+            <li>✔ Digital advertising (Meta / Google)</li>
+            <li>✔ Funnel optimisation</li>
+            <li>✔ Brand positioning & messaging</li>
+            <li>✔ Data-driven campaign analysis</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           SERVICE PILLAR 3
+      ========================= -->
+      <div class="mb-24 grid md:grid-cols-2 gap-14 items-center">
+
+        <div>
+          <h3 class="text-3xl font-bold text-brand mb-6">
+            Operational Leadership & SME Transformation
+          </h3>
+
+          <p class="text-slate-700 mb-6 leading-relaxed">
+            During periods of transition or stagnation, we provide structured,
+            hands-on operational leadership to restore discipline,
+            profitability, and long-term scalability.
+          </p>
+
+          <ul class="space-y-3 text-slate-700">
+            <li>✔ Process restructuring</li>
+            <li>✔ Financial performance optimisation</li>
+            <li>✔ KPI system design</li>
+            <li>✔ Leadership advisory</li>
+            <li>✔ Growth roadmap planning</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-10 rounded-2xl shadow-md border border-slate-100">
+          <h4 class="text-xl font-semibold text-brand mb-4">
+            Outcome Focus
+          </h4>
+          <p class="text-slate-600">
+            Clear accountability structures, measurable profitability
+            improvements, and a resilient business prepared for long-term growth.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           ENGAGEMENT MODEL
+      ========================= -->
+      <div class="bg-brand text-white p-14 rounded-2xl text-center">
+
+        <h3 class="text-3xl font-bold font-['Playfair_Display'] mb-6">
+          Our Engagement Model
+        </h3>
+
+        <p class="max-w-3xl mx-auto text-slate-200 text-lg">
+          We do not operate as passive consultants. We work alongside
+          business owners, implementing systems directly and aligning
+          compensation with measurable value creation.
+        </p>
+
+        <div class="mt-8">
+          <button onclick="showPage('contact')"
+            class="bg-cream text-brand px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition shadow-md">
+            Discuss Your Business
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- =========================
+     ALL IN ONE PAGE
+========================= -->
+<div id="allinone" class="page">
+
+  <section class="py-28 bg-cream relative overflow-hidden">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-20 right-10 w-80 h-80 bg-brand opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-96 h-96 bg-brand opacity-5 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+      <!-- =========================
+           HERO INTRO
+      ========================= -->
+      <div class="text-center mb-24">
+        <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-brand mb-6">
+          All In One
+        </h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          From strategic advisory to AI system implementation and full campaign launch —
+          we deliver a complete, end-to-end growth infrastructure for your business.
+        </p>
+      </div>
+
+
+      <!-- =========================
+           PROCESS FLOW (VISUAL TIMELINE)
+      ========================= -->
+      <div class="relative mb-32">
+
+        <!-- Connecting Line -->
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-brand opacity-10"></div>
+
+        <div class="grid md:grid-cols-4 gap-10 text-center relative">
+
+          <!-- STEP 1 -->
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 relative">
+            <div class="w-14 h-14 mx-auto mb-6 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+              1
+            </div>
+            <h3 class="font-semibold text-brand mb-3">Consulting</h3>
+            <p class="text-slate-600 text-sm">
+              Business audit, opportunity mapping,
+              operational diagnosis, and strategic positioning.
+            </p>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 relative">
+            <div class="w-14 h-14 mx-auto mb-6 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+              2
+            </div>
+            <h3 class="font-semibold text-brand mb-3">Strategy Design</h3>
+            <p class="text-slate-600 text-sm">
+              AI integration planning, CRM architecture,
+              growth roadmap, and campaign framework.
+            </p>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 relative">
+            <div class="w-14 h-14 mx-auto mb-6 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+              3
+            </div>
+            <h3 class="font-semibold text-brand mb-3">Prototype Build</h3>
+            <p class="text-slate-600 text-sm">
+              System configuration, workflow automation,
+              funnel development, dashboard creation.
+            </p>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 relative">
+            <div class="w-14 h-14 mx-auto mb-6 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+              4
+            </div>
+            <h3 class="font-semibold text-brand mb-3">Launch & Scale</h3>
+            <p class="text-slate-600 text-sm">
+              Campaign execution, performance tracking,
+              optimisation, and growth acceleration.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- =========================
+           DONE-FOR-YOU STRUCTURE
+      ========================= -->
+      <div class="grid md:grid-cols-2 gap-16 items-center mb-28">
+
+        <!-- Left Text -->
+        <div>
+          <h3 class="text-3xl font-bold text-brand mb-6 font-['Playfair_Display']">
+            Fully Managed. Strategically Integrated.
+          </h3>
+
+          <p class="text-slate-700 mb-6 leading-relaxed">
+            Unlike fragmented service providers, we manage the entire lifecycle —
+            from advisory to execution. You are not coordinating multiple vendors.
+            You are partnering with one integrated strategic team.
+          </p>
+
+          <ul class="space-y-4 text-slate-700">
+            <li>✔ Consulting & strategic alignment</li>
+            <li>✔ AI-powered CRM integration</li>
+            <li>✔ Marketing funnel & campaign build</li>
+            <li>✔ Prototype development</li>
+            <li>✔ Launch execution & optimisation</li>
+          </ul>
+        </div>
+
+        <!-- Right Visual Layer Block -->
+        <div class="relative">
+
+          <div class="bg-brand text-white p-10 rounded-2xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-4">One Strategic Partner</h4>
+            <p class="text-slate-200 text-sm">
+              Strategy, technology, marketing, and execution —
+              unified under one accountable structure.
+            </p>
+          </div>
+
+          <div class="absolute -bottom-6 -right-6 bg-white p-8 rounded-2xl shadow-md border border-slate-100 w-64">
+            <h4 class="font-semibold text-brand mb-2">Reduced Complexity</h4>
+            <p class="text-slate-600 text-xs">
+              Fewer vendors. Clear accountability.
+              Faster implementation.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           FINAL CALL BLOCK
+      ========================= -->
+      <div class="bg-white p-14 rounded-2xl shadow-lg border border-slate-100 text-center">
+
+        <h3 class="text-3xl font-bold text-brand font-['Playfair_Display'] mb-6">
+          From Idea to Execution — Seamlessly Delivered
+        </h3>
+
+        <p class="text-slate-600 max-w-3xl mx-auto mb-8">
+          We remove fragmentation, reduce risk, and accelerate execution
+          by managing the full transformation journey for you.
+        </p>
+
+        <button onclick="showPage('contact')"
+          class="bg-brand text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition shadow-md">
+          Start Your Transformation
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- =========================
+     CONTACT PAGE
+========================= -->
+<div id="contact" class="page">
+
+  <section class="py-28 bg-cream relative overflow-hidden">
+
+    <!-- Decorative Accent -->
+    <div class="absolute top-10 right-10 w-80 h-80 bg-brand opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-brand opacity-5 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+      <!-- =========================
+           HEADER
+      ========================= -->
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-brand mb-6">
+          Contact Us
+        </h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Let’s discuss how we can integrate AI, optimise your operations,
+          and build scalable growth systems for your business.
+        </p>
+      </div>
+
+
+      <!-- =========================
+           CONTACT GRID
+      ========================= -->
+      <div class="grid md:grid-cols-2 gap-16">
+
+        <!-- LEFT: CONTACT INFORMATION -->
+        <div class="space-y-10">
+
+          <!-- Email Card -->
+          <div class="bg-white p-10 rounded-2xl shadow-md border border-slate-100">
+            <h3 class="text-xl font-semibold text-brand mb-3">
+              Email
+            </h3>
+            <p class="text-slate-700">
+              thebusinessinsighthub@gmail.com
+            </p>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="bg-white p-10 rounded-2xl shadow-md border border-slate-100">
+            <h3 class="text-xl font-semibold text-brand mb-3">
+              Phone
+            </h3>
+            <p class="text-slate-700">
+              +852 6706 1310
+            </p>
+          </div>
+
+          <!-- Positioning Card -->
+          <div class="bg-brand text-white p-10 rounded-2xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">
+              Strategic Consultation
+            </h3>
+            <p class="text-slate-200 text-sm leading-relaxed">
+              We work with SMEs seeking structured transformation.
+              Initial consultations are focused on diagnosing
+              operational bottlenecks and identifying AI integration
+              opportunities.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT: CONTACT FORM -->
+        <div class="bg-white p-12 rounded-2xl shadow-lg border border-slate-100">
+
+          <h3 class="text-2xl font-bold text-brand mb-8 font-['Playfair_Display']">
+            Send Us a Message
+          </h3>
+
+          <form class="space-y-6">
+
+            <!-- Name -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">
+                Full Name
+              </label>
+              <input type="text"
+                class="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition">
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">
+                Email Address
+              </label>
+              <input type="email"
+                class="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition">
+            </div>
+
+            <!-- Company -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">
+                Company Name
+              </label>
+              <input type="text"
+                class="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition">
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">
+                How Can We Help?
+              </label>
+              <textarea rows="4"
+                class="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button"
+              class="w-full bg-brand text-white py-3 rounded-lg font-semibold hover:opacity-90 transition shadow-md">
+              Request Consultation
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="bg-brand-dark text-white py-8 text-center">
+  <p class="font-semibold">Business Insight Hub</p>
+  <p class="text-slate-400 text-sm">© 2026 All Rights Reserved</p>
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+  });
+  document.getElementById(pageId).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
